@@ -1,14 +1,6 @@
 # htmparse
 Htmparse shellscript spider
 
-
-  _   _ _            ______                   
- | | | | |           | ___ \                  
- | |_| | |_ _ __ ___ | |_/ /_ _ _ __ ___  ___ 
- |  _  | __| '_ \ _ \|  __/ _  | '__/ __|/ _ \\
- | | | | |_| | | | | | | | (_| | |  \__ \  __/
- \_| |_/\__|_| |_| |_\_|  \__,_|_|  |___/\___|
-
  v.0.1, w41l3r - all rights Reserved :D
 
  This software gets all urls referenced by some site
