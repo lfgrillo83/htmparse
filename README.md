@@ -1,7 +1,7 @@
 # htmparse
 Htmparse shellscript spider
 
- v.0.1, w41l3r - all rights Reserved :D
+ v.0.1
 
  This software gets all urls referenced by some site
  (as much as possible!) and generates a report list.

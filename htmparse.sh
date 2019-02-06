@@ -3,8 +3,6 @@
 # htmparse.sh - v.01
 #
 # Feb,2019
-#
-# w41l3r
 
 
 #
@@ -23,7 +21,7 @@ echo  " |  _  | __| '_ \ _ \|  __/ _  | '__/ __|/ _ \\"
 echo  " | | | | |_| | | | | | | | (_| | |  \__ \  __/"
 echo  " \_| |_/\__|_| |_| |_\_|  \__,_|_|  |___/\___|"
 echo
-echo  " v.0.1, w41l3r - all rights Reserved :D"
+echo  " v.0.1, all rights Reserved :D"
 echo
 echo  " This software gets all urls referenced by some site"
 echo  " (as much as possible!) and generates a list: $FINAL_LIST"
