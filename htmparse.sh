@@ -80,8 +80,8 @@ fi
 
 #Parse index file (work with href entries)
 # and generate url list
-cat $INDEX | sed 's/>/>\n/g' | grep href| cut -f3 -d/| \
- cut -f1 -d\" | sort -u| grep "\." > $URL_LIST
+cat $INDEX | sed 's/>/>\n/g' | grep "href="| grep -v "var " |\
+ cut -f3 -d/| cut -f1 -d\" | sort -u| grep "\." > $URL_LIST
 
 cd ..
 
@@ -107,6 +107,7 @@ case "$OPT" in
 "?") print_banner; print_syntax; exit 9;;
 *) print_banner; print_syntax; exit 9;;
 esac
+done
 
 if [ -z $USERURL ]; then
  print_banner
@@ -122,6 +123,8 @@ if [ $? -ne 0 ];then
 fi
 cd $WORKDIR
 
+echo "Starting spider..."
+echo "WorkDir: $WORKDIR"
 spider $USERURL
 
 #
@@ -142,5 +145,5 @@ if [ $N_ITERACTS -gt 0 ];then
 fi
 
 cat */$URL_LIST |sort -u |uniq -c >> $FINAL_LIST
-
+echo "$FINAL_LIST generated successfully!"
 exit 0
