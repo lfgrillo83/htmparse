@@ -92,10 +92,12 @@ cd ..
 # Main
 #############################################################
 
+N_ITERACTS=0 #Iteracts counter, default value
+
 if [ $# -lt 1 ]; then
 print_banner
 print_syntax
-exit
+exit 9
 fi
 
 while getopts "u:i:" OPT; do
@@ -106,9 +108,10 @@ case "$OPT" in
 *) print_banner; print_syntax; exit 9;;
 esac
 
-if [ -z "$USERURL" ]; then
+if [ -z $USERURL ]; then
  print_banner
  print_syntax
+ exit 9
 fi
 
 WORKDIR="${USERURL}-`date +%d%b%H%M`"
@@ -139,4 +142,5 @@ if [ $N_ITERACTS -gt 0 ];then
 fi
 
 cat */$URL_LIST |sort -u |uniq -c >> $FINAL_LIST
-exit
+
+exit 0
