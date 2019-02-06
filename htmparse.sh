@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# htmparser.sh - v.01
+# htmparse.sh - v.01
 #
 # Feb,2019
 #
